@@ -14,13 +14,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh; /* Минимальная высота страницы на весь экран */
+            background-image: url('gerou61.png'); /* Замените на действительный URL изображения */
+            background-size: cover;
+            background-position: center;
         }
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.6); /* Чтобы текст был более читаемым на фоне */
             color: #fff;
             width: 100%;
             text-align: center;
-            padding: 1em 0;
+            padding: 2em 0;
         }
         main {
             max-width: 800px;
@@ -29,6 +33,8 @@
             padding: 2em;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            position: relative; /* Позволяет позиционировать текст поверх изображения */
+            z-index: 1; /* Чтобы текст находился поверх фона */
         }
         h1, h2 {
             margin-top: 0;
@@ -60,14 +66,6 @@
             position: fixed;
             bottom: 0;
         }
-        .anime-bg {
-            background-image: url('gerou61.png'); /* Замените на действительный URL изображения */
-            background-size: cover;
-            background-position: center;
-            height: 200px;
-            width: 100%;
-            margin: 0;
-        }
     </style>
 </head>
 <body>
@@ -75,13 +73,11 @@
         <h1>Моя Личная Веб-страница</h1>
     </header>
 
-    <div class="anime-bg"></div>
-
     <main>
 <!--        <img src="https://example.com/my-photo.jpg" alt="Фото профиля" class="profile-img"> &lt;!&ndash; Замените на действительный URL фотографии &ndash;&gt;-->
         <h2>Обо мне</h2>
         <p>Привет! Меня зовут Михаил. Я занимаюсь Програмированием и создаю сайты.</p>
-        
+
         <h2>Социальные сети</h2>
         <ul class="social-links">
             <li><a href="https://discord.com/channels/846090153583968326" target="_blank">Дискорд</a></li>
